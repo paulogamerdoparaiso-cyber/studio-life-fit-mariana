@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Life Fit - Academia & Condicionamento Físico | Mariana MG</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts (Plus Jakarta Sans & Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fit: {
+              DEFAULT: '#0F172A', // Slate escuro premium
+              dark: '#0B0F19',
+              darker: '#05070D',
+              card: '#1E293B',
+              accent: '#22C55E', // Verde Neon Energy
+              neon: '#4ADE80',
+              cyan: '#06B6D4',
+              gold: '#FACC15'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #05070D;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #22C55E;
+      border-radius: 4px;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #22C55E 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-fit-darker text-slate-100 font-sans min-h-screen flex flex-col pb-16 antialiased selection:bg-fit-accent selection:text-fit-darker">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-fit-dark via-fit-card to-fit-dark text-slate-300 text-[11px] sm:text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center gap-1.5 text-fit-accent font-bold">
+          <i class="fa-solid fa-location-dot"></i> Rua Direita, 78, Loja 02 - Centro, Mariana/MG
+        </span>
+        <span class="hidden sm:inline text-slate-700">|</span>
+        <span class="hidden sm:flex items-center gap-1 text-slate-300">
+          <i class="fa-solid fa-dumbbell text-fit-accent"></i> Musculação, Funcional & Condicionamento Físico
+        </span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="bg-emerald-950/80 px-2.5 py-0.5 rounded-full text-[10px] uppercase font-extrabold text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+          <i class="fa-solid fa-circle-check"></i> Unidade Ativa desde 2020
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="bg-fit-dark/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-gradient-to-tr from-fit-accent to-fit-cyan rounded-xl flex items-center justify-center shadow-lg shadow-emerald-950/50 transform group-hover:rotate-6 transition duration-300">
+          <i class="fa-solid fa-bolt-lightning text-fit-darker text-2xl font-black"></i>
+        </div>
+        <div>
+          <span class="font-display text-2xl sm:text-3xl font-black tracking-tight text-white uppercase block leading-none">
+            STUDIO <span class="text-gradient">LIFE FIT</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold block mt-0.5">
+            Mariana • MG
+          </span>
+        </div>
+      </a>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button onclick="openCNPJModal()" class="hidden sm:inline-flex items-center gap-1.5 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 text-xs font-bold px-3 py-2 rounded-xl transition">
+          <i class="fa-solid fa-shield-check text-fit-accent"></i> Empresa Verificada
+        </button>
+
+        <a href="https://wa.me/5531995418124?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20no%20Studio%20Life%20Fit." target="_blank" class="bg-gradient-to-r from-fit-accent to-emerald-600 hover:opacity-95 text-fit-darker font-black text-xs px-4 py-2.5 rounded-xl transition flex items-center gap-2 shadow-lg shadow-emerald-950/50 uppercase tracking-wider">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden sm:inline">Aula Experimental</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-12 sm:py-16 px-4 overflow-hidden border-b border-slate-800">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      
+      <div class="space-y-5 text-center lg:text-left">
+        <span class="inline-flex items-center gap-2 bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+          <i class="fa-solid fa-fire"></i> Transforme Sua Saúde em Mariana
+        </span>
+        <h1 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight uppercase">
+          Alcance Seus Resultados no <span class="text-gradient">Studio Life Fit</span>
+        </h1>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto lg:mx-0 leading-relaxed">
+          Atendimento personalizado, equipamentos modernos e acompanhamento focado nos seus objetivos físicos e de saúde no centro de Mariana/MG.
+        </p>
+
+        <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
+          <a href="#planos" class="bg-gradient-to-r from-fit-accent to-emerald-500 text-fit-darker font-black text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-xl hover:scale-105 transition transform flex items-center gap-2 uppercase tracking-wider">
+            <i class="fa-solid fa-dumbbell"></i> Conhecer Nossos Planos
+          </a>
+          <a href="#imc-calculator" class="bg-slate-800/80 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-bold px-5 py-3.5 rounded-2xl border border-slate-700 transition flex items-center gap-2">
+            <i class="fa-solid fa-calculator text-fit-accent"></i> Calcular Meu IMC
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center">
+        <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-tr from-fit-accent to-fit-cyan rounded-full blur-3xl opacity-20 absolute"></div>
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Studio Life Fit Mariana" class="w-72 h-72 sm:w-96 sm:h-96 object-cover rounded-3xl shadow-2xl border-2 border-slate-700 transform rotate-1 hover:rotate-0 transition duration-500 relative z-10">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFICIAL CNPJ VERIFICATION SECTION -->
+  <section id="empresa-verificada" class="max-w-6xl mx-auto px-4 my-8">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">
+            <i class="fa-solid fa-badge-check text-emerald-400"></i>
+            Empresa Registrada e Ativa na Receita Federal
+          </div>
+
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-display font-black text-white flex items-center gap-2">
+              Studio Life Fit LTDA
+              <span class="text-emerald-400 text-base" title="CNPJ Ativo"><i class="fa-solid fa-circle-check"></i></span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1">
+              Nome Fantasia: <strong class="text-white">Studio Life Fit</strong> | Abertura: <span class="text-fit-accent font-bold">09/09/2020</span>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+            <div class="bg-slate-900/60 p-3 rounded-2xl border border-slate-800">
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">CNPJ Oficial</span>
+              <strong class="text-fit-accent font-mono text-sm">38.393.953/0001-30</strong>
+            </div>
+            <div class="bg-slate-900/60 p-3 rounded-2xl border border-slate-800">
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">Atividade Principal</span>
+              <strong class="text-white text-sm">CNAE 93.13-1-00 (Condicionamento Físico)</strong>
+            </div>
+            <div class="bg-slate-900/60 p-3 rounded-2xl border border-slate-800">
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">Inscrição Estadual MG</span>
+              <strong class="text-white text-sm">003834973.00-72</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-row lg:flex-col gap-2.5 w-full lg:w-auto shrink-0 border-t lg:border-t-0 lg:border-l border-slate-800 pt-4 lg:pt-0 lg:pl-6 justify-end">
+          <button onclick="openCNPJModal()" class="w-full sm:w-auto bg-fit-accent hover:bg-emerald-400 text-fit-darker font-black text-xs px-5 py-3.5 rounded-2xl transition shadow-lg flex items-center justify-center gap-2 uppercase tracking-wider">
+            <i class="fa-solid fa-file-contract"></i> Ficha da Empresa
+          </button>
+          <a href="https://maps.google.com/?q=Rua+Direita,+78+-+Centro,+Mariana+-+MG" target="_blank" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-white font-semibold text-xs px-5 py-3.5 rounded-2xl transition border border-slate-700 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-map-location-dot text-fit-accent"></i> Abrir Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section class="max-w-6xl mx-auto px-4 py-6 w-full space-y-6">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <span class="text-fit-accent font-extrabold text-xs uppercase tracking-widest">Treinos de Alta Performance</span>
+        <h3 class="text-2xl font-display font-black text-white">Nossas Modalidades</h3>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="glass-card p-5 rounded-3xl space-y-3 border border-slate-800 hover:border-fit-accent/50 transition">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-950/80 text-fit-accent flex items-center justify-center text-xl font-black">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <h4 class="font-display font-bold text-lg text-white">Musculação Guiada</h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Equipamentos modernos para hipertrofia, fortalecimento muscular e reabilitação com orientação constante dos nossos professores.
+        </p>
+      </div>
+
+      <div class="glass-card p-5 rounded-3xl space-y-3 border border-slate-800 hover:border-fit-accent/50 transition">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-950/80 text-fit-cyan flex items-center justify-center text-xl font-black">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h4 class="font-display font-bold text-lg text-white">Treinamento Funcional</h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Circuitos dinâmicos para queima calórica, ganho de resistência, agilidade e flexibilidade para o dia a dia.
+        </p>
+      </div>
+
+      <div class="glass-card p-5 rounded-3xl space-y-3 border border-slate-800 hover:border-fit-accent/50 transition">
+        <div class="w-12 h-12 rounded-2xl bg-amber-950/80 text-fit-gold flex items-center justify-center text-xl font-black">
+          <i class="fa-solid fa-person-biking"></i>
+        </div>
+        <h4 class="font-display font-bold text-lg text-white">Aluguel de Equipamentos</h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Serviço secundário (CNAE 77.21-7-00) de locação de acessórios esportivos e recreativos para treinos e atividades externas.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PLANOS DA ACADEMIA -->
+  <section id="planos" class="max-w-6xl mx-auto px-4 py-8 w-full space-y-6">
+    <div class="text-center max-w-xl mx-auto">
+      <span class="text-fit-accent font-extrabold text-xs uppercase tracking-widest">Invista em Você</span>
+      <h3 class="text-3xl font-display font-black text-white">Planos & Mensalidades</h3>
+      <p class="text-xs text-slate-400 mt-1">Escolha a melhor opção para a sua rotina de treinos no centro de Mariana.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+      
+      <!-- Plano Mensal -->
+      <div class="glass-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <span class="text-slate-400 text-[10px] font-extrabold uppercase tracking-wider block">Flexibilidade</span>
+          <h4 class="text-xl font-display font-black text-white mt-1">Plano Mensal</h4>
+          <div class="my-4">
+            <span class="text-3xl font-black text-white">R$ 110</span>
+            <span class="text-xs text-slate-400"> / mês</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 my-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Acesso ilimitado à musculação</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Avaliação física inicial</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Ficha de treino personalizada</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/5531995418124?text=Quero%20matricular%20no%20Plano%20Mensal%20do%20Studio%20Life%20Fit" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl transition text-center block uppercase tracking-wider">
+          Matricular Agora
+        </a>
+      </div>
+
+      <!-- Plano Trimestral (Recomendado) -->
+      <div class="glass-card p-6 rounded-3xl border-2 border-fit-accent relative flex flex-col justify-between shadow-xl shadow-emerald-950/20">
+        <span class="absolute -top-3 right-6 bg-fit-accent text-fit-darker font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
+          Mais Popular
+        </span>
+        <div>
+          <span class="text-fit-accent text-[10px] font-extrabold uppercase tracking-wider block">Melhor Custo-Benefício</span>
+          <h4 class="text-xl font-display font-black text-white mt-1">Plano Trimestral</h4>
+          <div class="my-4">
+            <span class="text-3xl font-black text-fit-accent">R$ 95</span>
+            <span class="text-xs text-slate-400"> / mês</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 my-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Acesso ilimitado total</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Renovação de ficha periódica</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Acompanhamento de metas</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/5531995418124?text=Quero%20matricular%20no%20Plano%20Trimestral%20do%20Studio%20Life%20Fit" target="_blank" class="w-full bg-fit-accent hover:bg-emerald-400 text-fit-darker font-black text-xs py-3.5 rounded-xl transition text-center block uppercase tracking-wider shadow-lg">
+          Garantir Desconto
+        </a>
+      </div>
+
+      <!-- Plano Anual -->
+      <div class="glass-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <span class="text-slate-400 text-[10px] font-extrabold uppercase tracking-wider block">Foco Total</span>
+          <h4 class="text-xl font-display font-black text-white mt-1">Plano Anual VIP</h4>
+          <div class="my-4">
+            <span class="text-3xl font-black text-white">R$ 85</span>
+            <span class="text-xs text-slate-400"> / mês</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 my-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Menor valor mensal</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Avaliação física trimestral</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fit-accent"></i> Direito a trancamento em férias</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/5531995418124?text=Quero%20matricular%20no%20Plano%20Anual%20do%20Studio%20Life%20Fit" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl transition text-center block uppercase tracking-wider">
+          Matricular Anual
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE IMC INTERATIVA -->
+  <section id="imc-calculator" class="max-w-4xl mx-auto px-4 my-8 w-full">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-fit-accent font-extrabold text-xs uppercase tracking-widest">Ferramenta Gratuita</span>
+          <h3 class="text-2xl font-display font-black text-white">Calculadora de IMC</h3>
+          <p class="text-xs text-slate-400 max-w-sm">Descubra seu Índice de Massa Corporal e veja o ponto de partida para os seus treinos.</p>
+        </div>
+
+        <div class="w-full md:w-auto space-y-3">
+          <div class="flex gap-2">
+            <input type="number" id="weight" placeholder="Peso (kg)" class="w-28 bg-slate-900 border border-slate-700 text-white text-xs px-3 py-2.5 rounded-xl focus:outline-none focus:border-fit-accent">
+            <input type="number" id="height" placeholder="Altura (cm)" class="w-28 bg-slate-900 border border-slate-700 text-white text-xs px-3 py-2.5 rounded-xl focus:outline-none focus:border-fit-accent">
+          </div>
+          <button onclick="calculateIMC()" class="w-full bg-fit-accent hover:bg-emerald-400 text-fit-darker font-black text-xs py-2.5 rounded-xl transition uppercase tracking-wider">
+            Calcular Agora
+          </button>
+          <div id="imc-result" class="text-xs text-center font-bold text-fit-accent hidden"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-fit-dark border-t border-slate-800 text-slate-400 py-8 px-4 mt-auto">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div>
+        <h4 class="font-display font-black text-white text-lg">Studio Life Fit LTDA</h4>
+        <p class="text-xs text-slate-300 mt-0.5">Rua Direita, 78, Loja 02 - Centro, Mariana - MG, CEP 35420-060</p>
+        <p class="text-[11px] text-fit-accent font-mono mt-1">CNPJ Oficial: 38.393.953/0001-30 (Inscrição Estadual MG: 003834973.00-72)</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5531995418124" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-3 rounded-xl transition flex items-center gap-2 shadow-lg">
+          <i class="fa-brands fa-whatsapp text-base"></i> (31) 99541-8124
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CNPJ MODAL -->
+  <div id="cnpj-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-fit-dark border border-slate-800 rounded-3xl max-w-lg w-full p-6 shadow-2xl relative">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
+        <h3 class="font-display font-bold text-lg text-white flex items-center gap-2">
+          <i class="fa-solid fa-shield-check text-emerald-400"></i> Cartão CNPJ - Receita Federal
+        </h3>
+        <button onclick="openCNPJModal()" class="text-slate-400 hover:text-white font-bold p-1">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs text-slate-300">
+        <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+          <span class="block text-[10px] uppercase font-bold text-slate-400">Razão Social</span>
+          <strong class="text-sm text-white font-display">Studio Life Fit LTDA</strong>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+            <span class="block text-[10px] uppercase text-slate-400">Nome Fantasia</span>
+            <strong class="text-white font-bold">Studio Life Fit</strong>
+          </div>
+          <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+            <span class="block text-[10px] uppercase text-slate-400">CNPJ Ativo</span>
+            <strong class="font-mono text-fit-accent">38.393.953/0001-30</strong>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+            <span class="block text-[10px] uppercase text-slate-400">Data de Abertura</span>
+            <strong class="text-white">09/09/2020</strong>
+          </div>
+          <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+            <span class="block text-[10px] uppercase text-slate-400">Inscrição Estadual MG</span>
+            <strong class="text-white">003834973.00-72</strong>
+          </div>
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
+          <span class="block text-[10px] uppercase text-slate-400">Endereço Registrado</span>
+          <p class="font-medium text-white mt-0.5">Rua Direita, Nº 78, Loja 02 - Centro, Mariana - MG, CEP 35420-060</p>
+        </div>
+      </div>
+      <div class="mt-5 text-right">
+        <button onclick="openCNPJModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCNPJModal() {
+      document.getElementById('cnpj-modal').classList.toggle('hidden');
+    }
+
+    function calculateIMC() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value) / 100;
+      const resultEl = document.getElementById('imc-result');
+
+      if (!weight || !height) {
+        resultEl.textContent = 'Preencha peso e altura corretamente!';
+        resultEl.classList.remove('hidden');
+        return;
+      }
+
+      const imc = (weight / (height * height)).toFixed(1);
+      let classification = '';
+
+      if (imc < 18.5) classification = 'Abaixo do peso';
+      else if (imc < 24.9) classification = 'Peso normal (Ideal)';
+      else if (imc < 29.9) classification = 'Sobrepeso';
+      else classification = 'Obesidade';
+
+      resultEl.textContent = `Seu IMC é ${imc} (${classification})`;
+      resultEl.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
